@@ -22,3 +22,10 @@ for d in data:
 print('Reviews under 100 characters: ',len(new))
 print(new[0])
 print(new[1])
+
+good = []
+for d in data:
+	d = d.lower()
+	if 'good' in d:
+		good.append(d)
+print(good)

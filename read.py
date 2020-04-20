@@ -10,7 +10,15 @@ print('Done reading file. Total: ', len(data), 'data')
 
 # calculate the average characters in each comment.
 sum_len = 0
-for d in data:
+for d in data:  #d is str, data is list
 	sum_len = sum_len + len(d)
 average = sum_len / len(data)
 print('Average characters in each comment: ', average)
+
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print('Reviews under 100 characters: ',len(new))
+print(new[0])
+print(new[1])
